@@ -1,0 +1,13 @@
+__turbopack_load_page_chunks__("/_app", [
+  "static/chunks/0u8__next_dist_compiled_026gnxb._.js",
+  "static/chunks/0u8__next_dist_shared_lib_0~tlgsb._.js",
+  "static/chunks/0u8__next_dist_client_11m-uk5._.js",
+  "static/chunks/0u8__next_dist_0d2g4i9._.js",
+  "static/chunks/0u8__next_app_02fbsy8.js",
+  "static/chunks/[next]_entry_page-loader_ts_0a7cs3e._.js",
+  "static/chunks/0u8__react-dom_0ue.hjg._.js",
+  "static/chunks/0u8__0drad~u._.js",
+  "static/chunks/[root-of-the-server]__0u60g06._.js",
+  "static/chunks/_gemini_antigravity_scratch_m-group-vitrine_pages__app_07xvfw~._.js",
+  "static/chunks/turbopack-_gemini_antigravity_scratch_m-group-vitrine_pages__app_0k0p61w._.js"
+])
