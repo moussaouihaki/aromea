@@ -62,7 +62,7 @@ export default function ProductsPage() {
               >
                 <div className="product-category">{product.category}</div>
                 <div className="product-image">
-                  <img src={product.image} alt={product.name} />
+                  <img src={product.image || '/favicon.svg'} alt={product.name} />
                 </div>
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
@@ -79,7 +79,7 @@ export default function ProductsPage() {
             <span className="close-modal" onClick={() => setOpenProduct(null)}>&times;</span>
             <div className="modal-body">
               <div className="modal-img">
-                <img src={openProduct.image} alt={openProduct.name} />
+                <img src={openProduct.image || '/favicon.svg'} alt={openProduct.name} />
               </div>
               <div className="modal-info">
                 <div className="product-category">{openProduct.category}</div>
