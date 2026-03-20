@@ -82,12 +82,28 @@ export default function ProductsPage() {
               <div className="modal-img" style={{ background: '#fbfbfb', padding: '2rem', display: 'flex', justifyContent: 'center' }}>
                 <img src={openProduct.image || '/favicon.svg'} alt={openProduct.name} style={{ width: '100%', height: 'auto', maxHeight: '750px', objectFit: 'contain' }} />
               </div>
-              <div className="modal-info">
-                <div className="product-category">{openProduct.category}</div>
-                <h2 style={{ fontSize: '1.8rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1.5rem', borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>{openProduct.name}</h2>
-                <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '3rem', lineHeight: '1.8' }}>{openProduct.description}</p>
+              <div className="modal-info" style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center' }}>
+                <span className="product-category" style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '3px', marginBottom: '1.5rem', display: 'block' }}>
+                  {openProduct.category}
+                </span>
+                <h2 style={{ fontSize: '2.2rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '2rem', lineHeight: '1.2', color: '#0D1117' }}>
+                  {openProduct.name}
+                </h2>
+                <div style={{ width: '60px', height: '2px', background: 'var(--primary)', marginBottom: '2.5rem' }}></div>
+                <div style={{ marginBottom: '3.5rem' }}>
+                  <p style={{ fontSize: '1.1rem', color: '#666', lineHeight: '1.8', marginBottom: '1.5rem' }}>
+                    {openProduct.description}
+                  </p>
+                  {openProduct.price && (
+                    <p style={{ fontSize: '1.4rem', fontWeight: 700, color: '#0D1117' }}>
+                      {openProduct.price} CHF <span style={{ fontSize: '0.8rem', fontWeight: 400, opacity: 0.5 }}>HT</span>
+                    </p>
+                  )}
+                </div>
                 <div className="modal-cta">
-                  <a href={`mailto:hello@aromea.com?subject=Demande de devis: ${openProduct.name}`} className="btn btn-primary" style={{ background: '#0D1117', color: 'white', border: '1px solid #0D1117' }}>Demander un Devis</a>
+                  <a href={`mailto:hello@aromea.com?subject=Demande de devis: ${openProduct.name}`} className="btn btn-primary" style={{ background: '#0D1117', color: 'white', padding: '1.5rem 2.5rem', width: 'fit-content' }}>
+                    Demander une Offre Personnalisée
+                  </a>
                 </div>
               </div>
             </div>
