@@ -41,7 +41,7 @@ body {
   align-items: center;
   position: sticky;
   top: 0;
-  background: rgba(10, 10, 12, 0.8);
+  background: rgba(250, 249, 246, 0.9); /* Beige translucide */
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid var(--border-color);
@@ -58,6 +58,8 @@ body {
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.5px;
+  color: var(--text-main);
+  text-decoration: none;
 }
 
 .logo-accent {
@@ -241,6 +243,8 @@ h1 {
   background-color: var(--primary);
   color: white;
   border-color: var(--primary);
+  transition: transform 0.2s ease;
+  transform: scale(1.05);
 }
 
 .product-grid {
@@ -295,6 +299,7 @@ h1 {
   font-size: 0.9rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2; /* Added for standard compatibility */
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 1.5rem;
