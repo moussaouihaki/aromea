@@ -94,11 +94,6 @@ export default function ProductsPage() {
                   <p style={{ fontSize: '1.1rem', color: '#666', lineHeight: '1.8', marginBottom: '1.5rem' }}>
                     {openProduct.description}
                   </p>
-                  {openProduct.price && (
-                    <p style={{ fontSize: '1.4rem', fontWeight: 700, color: '#0D1117' }}>
-                      {openProduct.price} CHF <span style={{ fontSize: '0.8rem', fontWeight: 400, opacity: 0.5 }}>HT</span>
-                    </p>
-                  )}
                 </div>
                 <div className="modal-cta">
                   <a href={`mailto:hello@aromea.com?subject=Demande de devis: ${openProduct.name}`} className="btn btn-primary" style={{ background: '#0D1117', color: 'white', padding: '1.5rem 2.5rem', width: 'fit-content' }}>
