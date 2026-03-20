@@ -1,11 +1,11 @@
 :root {
-  --primary: #FA8072; /* Salmon */
+  --primary: #8B8589; /* Muted Taupe */
   --secondary: #D2B48C; /* Tan/Beige secondary */
   --bg-dark: #FAF9F6; /* Alabaster/Beige very light */
   --bg-light: #FFFFFF; /* White */
   --text-main: #483C32; /* Taupe dark */
-  --text-dim: #8B8589; /* Taupe light/grayish */
-  --accent-glow: rgba(250, 128, 114, 0.1);
+  --text-dim: #A8A8A8; /* Light grayish/taupe dim text */
+  --accent-glow: rgba(139, 133, 137, 0.1);
   --border-color: rgba(72, 60, 50, 0.1);
   --container-width: 1200px;
   --radius-lg: 24px;
