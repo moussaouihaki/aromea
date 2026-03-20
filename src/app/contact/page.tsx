@@ -1,11 +1,11 @@
 export default function ContactPage() {
   return (
     <main className="contact-page">
-      <section className="contact-hero" style={{ padding: '80px 0', background: 'var(--bg-dark)', textAlign: 'center' }}>
+      <section className="contact-hero" style={{ padding: '120px 0', background: 'var(--bg-dark)', textAlign: 'center', color: 'white' }}>
         <div className="container">
-          <div className="badge">Contact & Devis</div>
-          <h1>Une <span className="highlight">Solution</span> sur Mesure</h1>
-          <p>Contactez-nous pour toute demande de catalogue papier ou devis personnalisé.</p>
+          <div className="badge" style={{ background: 'rgba(255,255,255,0.1)', color: 'var(--primary)', border: '1px solid var(--primary)' }}>Contact & Devis</div>
+          <h1 style={{ color: 'white', marginBottom: '1.5rem' }}>Une <span className="highlight">Solution</span> sur Mesure</h1>
+          <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '700px', margin: '0 auto' }}>Contactez-nous pour toute demande de catalogue papier ou devis personnalisé.</p>
         </div>
       </section>
 

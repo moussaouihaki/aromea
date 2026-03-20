@@ -3,11 +3,11 @@ import Link from 'next/link'
 export default function ExpertisePage() {
   return (
     <main className="expertise-page">
-      <section className="expertise-hero" style={{ padding: '80px 0', background: 'var(--bg-dark)', textAlign: 'center' }}>
+      <section className="expertise-hero" style={{ padding: '120px 0', background: 'var(--bg-dark)', textAlign: 'center', color: 'white' }}>
         <div className="container">
-          <div className="badge">Notre Savoir-Faire</div>
-          <h1>Une <span className="highlight">Expertise</span> Professionnelle</h1>
-          <p>Nos services vont au-delà de la simple fourniture de produits sanitaires.</p>
+          <div className="badge" style={{ background: 'rgba(255,255,255,0.1)', color: 'var(--primary)', border: '1px solid var(--primary)' }}>Notre Savoir-Faire</div>
+          <h1 style={{ color: 'white', marginBottom: '1.5rem' }}>Une <span className="highlight">Expertise</span> Professionnelle</h1>
+          <p style={{ color: 'rgba(255,255,255,0.7)', maxWidth: '700px', margin: '0 auto' }}>Nos services vont au-delà de la simple fourniture de produits sanitaires.</p>
         </div>
       </section>
 
