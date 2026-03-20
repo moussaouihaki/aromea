@@ -78,13 +78,13 @@ export default function ProductsPage() {
         <div className="modal" onClick={() => setOpenProduct(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <span className="close-modal" onClick={() => setOpenProduct(null)}>&times;</span>
-            <div className="modal-body" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '4rem', alignItems: 'center' }}>
-              <div className="modal-img">
-                <img src={openProduct.image || '/favicon.svg'} alt={openProduct.name} style={{ width: '100%', height: 'auto', maxHeight: '700px', objectFit: 'contain' }} />
+            <div className="modal-body" style={{ display: 'grid', gridTemplateColumns: '2fr 1.2fr', gap: '3rem', alignItems: 'center' }}>
+              <div className="modal-img" style={{ background: '#fbfbfb', padding: '2rem', display: 'flex', justifyContent: 'center' }}>
+                <img src={openProduct.image || '/favicon.svg'} alt={openProduct.name} style={{ width: '100%', height: 'auto', maxHeight: '750px', objectFit: 'contain' }} />
               </div>
               <div className="modal-info">
                 <div className="product-category">{openProduct.category}</div>
-                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1.5rem', borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>{openProduct.name}</h2>
+                <h2 style={{ fontSize: '1.8rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1.5rem', borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>{openProduct.name}</h2>
                 <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '3rem', lineHeight: '1.8' }}>{openProduct.description}</p>
                 <div className="modal-cta">
                   <a href={`mailto:hello@aromea.com?subject=Demande de devis: ${openProduct.name}`} className="btn btn-primary" style={{ background: '#0D1117', color: 'white', border: '1px solid #0D1117' }}>Demander un Devis</a>
