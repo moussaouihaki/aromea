@@ -14,7 +14,7 @@ export default function Header() {
           <li><Link href="/expertise">Expertise</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </ul>
-        <a href="mailto:hello@aromea.com" className="btn btn-primary" style={{ padding: '0.6rem 1.2rem', borderRadius: '50px' }}>Catalogue</a>
+        <a href="mailto:hello@aromea.com" className="btn btn-primary" style={{ padding: '0.8rem 1.8rem' }}>Catalogue</a>
       </nav>
     </header>
   )

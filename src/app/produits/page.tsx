@@ -25,22 +25,22 @@ export default function ProductsPage() {
 
   return (
     <main className="products-page">
-      <section className="products-hero" style={{ padding: '60px 0', background: 'var(--bg-dark)', textAlign: 'center' }}>
+      <section className="products-hero" style={{ padding: '80px 0', background: '#0D1117', color: 'white', textAlign: 'center' }}>
         <div className="container">
-          <div className="badge">Catalogue Complet</div>
-          <h1>Nos <span className="highlight">Solutions</span> d'Hygiène</h1>
-          <p>Explorez notre gamme complète de plus de 300 références professionnelles.</p>
+          <div className="product-category">Luxe & Hygiène</div>
+          <h1 style={{ fontSize: '4rem', color: 'white', fontWeight: 800 }}>NOTRE <span className="highlight">CATALOGUE</span></h1>
+          <p style={{ opacity: 0.7, maxWidth: '600px', margin: '0 auto' }}>Découvrez l'intégralité de nos solutions professionnelles sélectionnées pour les établissements les plus exigeants.</p>
         </div>
       </section>
 
-      <section className="products-section">
+      <section className="products-section" style={{ minHeight: '80vh' }}>
         <div className="container">
           <div className="category-filter">
             <button 
               className={`filter-btn ${selectedCategory === 'all' ? 'active' : ''}`}
               onClick={() => setSelectedCategory('all')}
             >
-              Tous
+              TOUS LES PRODUITS
             </button>
             {catalogData.map(cat => (
               <button 
@@ -59,6 +59,7 @@ export default function ProductsPage() {
                 key={idx} 
                 className="product-card"
                 onClick={() => setOpenProduct(product)}
+                style={{ cursor: 'pointer' }}
               >
                 <div className="product-category">{product.category}</div>
                 <div className="product-image">
@@ -66,7 +67,7 @@ export default function ProductsPage() {
                 </div>
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
-                <button className="btn btn-outline" style={{ marginTop: 'auto', width: '100%' }}>En savoir plus</button>
+                <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '2px', color: '#333', fontWeight: 800 }}>DÉTAILS +</span>
               </div>
             ))}
           </div>
@@ -74,19 +75,19 @@ export default function ProductsPage() {
       </section>
 
       {openProduct && (
-        <div className="modal" style={{ display: 'block' }}>
-          <div className="modal-content">
+        <div className="modal" onClick={() => setOpenProduct(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
             <span className="close-modal" onClick={() => setOpenProduct(null)}>&times;</span>
-            <div className="modal-body">
+            <div className="modal-body" style={{ display: 'grid', gridTemplateColumns: 'minmax(300px, 1fr) 1.2fr', gap: '4rem', alignItems: 'center' }}>
               <div className="modal-img">
-                <img src={openProduct.image || '/favicon.svg'} alt={openProduct.name} />
+                <img src={openProduct.image || '/favicon.svg'} alt={openProduct.name} style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'contain' }} />
               </div>
               <div className="modal-info">
                 <div className="product-category">{openProduct.category}</div>
-                <h2>{openProduct.name}</h2>
-                <p>{openProduct.description}</p>
+                <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textTransform: 'uppercase', marginBottom: '1.5rem', borderBottom: '1px solid #eee', paddingBottom: '1rem' }}>{openProduct.name}</h2>
+                <p style={{ fontSize: '1.1rem', color: '#666', marginBottom: '3rem', lineHeight: '1.8' }}>{openProduct.description}</p>
                 <div className="modal-cta">
-                  <a href={`mailto:hello@aromea.com?subject=Demande de devis: ${openProduct.name}`} className="btn btn-primary">Demander un Devis</a>
+                  <a href={`mailto:hello@aromea.com?subject=Demande de devis: ${openProduct.name}`} className="btn btn-primary" style={{ background: '#0D1117', color: 'white', border: '1px solid #0D1117' }}>Demander un Devis</a>
                 </div>
               </div>
             </div>

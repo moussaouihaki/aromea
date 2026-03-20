@@ -4,62 +4,49 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main>
-      <section id="accueil" className="hero">
+      <section className="hero">
         <div className="container hero-content">
           <div className="hero-text">
-            <div className="badge">Solutions d'Hygiène Professionnelles</div>
-            <h1>L'Excellence du <span className="highlight">Nettoyage</span> pour votre Entreprise</h1>
-            <p>Aromea propose une gamme complète d'équipements et de consommables premium pour les professionnels exigeants en Suisse.</p>
-            <div className="hero-actions">
+            <h1>L'ART DE <br/><span className="highlight">L'HYGIÈNE</span></h1>
+            <p>Découvrez notre sélection exclusive de solutions sanitaires professionnelles conçues pour allier performance, durabilité et esthétisme.</p>
+            <div className="hero-actions" style={{ display: 'flex', gap: '2rem' }}>
               <Link href="/produits" className="btn btn-primary">Explorer le Catalogue</Link>
-              <Link href="/expertise" className="btn btn-outline">Notre Expertise</Link>
-            </div>
-          </div>
-          <div className="hero-image">
-            <div className="image-wrapper">
-              <img src="/hero.png" alt="Aromea Products Showcase" />
-              <div className="floating-card">
-                <span className="count">+300</span>
-                <span className="label">Produits Référencés</span>
-              </div>
+              <Link href="/expertise" className="btn btn-outline">Expertise</Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="highlights" style={{ padding: '100px 0', background: 'var(--bg-light)' }}>
+      <section style={{ padding: '150px 0', background: 'white' }}>
         <div className="container">
           <div className="section-header">
-            <h2>Nos <span className="highlight">Engagements</span></h2>
-            <p>Nous accompagnons les professionnels avec une sélection rigoureuse et un service de proximité.</p>
+            <div className="product-category" style={{ fontSize: '0.8rem' }}>La Marque</div>
+            <h2 style={{ fontSize: '4rem', fontWeight: 800 }}>L'EXIGENCE <br/> DU PREMIUM</h2>
           </div>
-          <div className="features-grid">
+          <div className="features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4rem' }}>
             <div className="feature-card">
-              <div className="icon">🏆</div>
-              <h3>Qualité Premium</h3>
-              <p>Sélection rigoureuse des meilleurs produits européens et locaux.</p>
+              <h3 style={{ textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '2px' }}>CONSEIL EXPERT</h3>
+              <p style={{ fontSize: '0.9rem', color: '#666' }}>Un accompagnement personnalisé pour chaque secteur professionnel (Cliniques, EMS, Hôtellerie, Services publics).</p>
             </div>
             <div className="feature-card">
-              <div className="icon">📦</div>
-              <h3>Stock Permanent</h3>
-              <p>Plus de 1000 références prêtes à être livrées sous 48h.</p>
+              <h3 style={{ textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '2px' }}>QUALITÉ SUISSE</h3>
+              <p style={{ fontSize: '0.9rem', color: '#666' }}>Sélection rigoureuse des meilleurs produits répondant aux normes de sécurité et d'hygiène les plus strictes.</p>
             </div>
             <div className="feature-card">
-              <div className="icon">🛠️</div>
-              <h3>Service Expert</h3>
-              <p>Accompagnement, conseil et installation de vos équipements sanitaires.</p>
+              <h3 style={{ textTransform: 'uppercase', marginBottom: '1.5rem', letterSpacing: '2px' }}>RÉACTIVITÉ</h3>
+              <p style={{ fontSize: '0.9rem', color: '#666' }}>Service de livraison rapide et gestion simplifiée de vos consommables pour garantir un fonctionnement sans interruption.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-box">
-            <h2>Besoin d'un <span className="highlight">Devis</span> ?</h2>
-            <p>Contactez nos experts pour une solution sur mesure adaptée à votre établissement (Hôtellerie, Restauration, Santé, Bureaux).</p>
-            <Link href="/contact" className="btn btn-white">Nous Contacter</Link>
-          </div>
+      <section style={{ padding: '150px 0', background: '#fbfbfb', borderTop: '1px solid #eee' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <div className="product-category" style={{ marginBottom: '2rem' }}>Catalogue Complet</div>
+          <p style={{ fontSize: '2rem', maxWidth: '800px', margin: '0 auto 4rem', fontWeight: 300, color: '#333' }}>
+            Accédez à plus de <span style={{ fontWeight: 700 }}>390 références</span> de produits professionnels pour l'hygiène de vos sanitaires, bureaux et cuisines.
+          </p>
+          <Link href="/produits" className="btn btn-primary" style={{ background: 'black', color: 'white' }}>Accéder au Catalogue</Link>
         </div>
       </section>
     </main>
