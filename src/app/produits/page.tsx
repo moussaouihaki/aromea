@@ -78,9 +78,9 @@ export default function ProductsPage() {
         <div className="modal" onClick={() => setOpenProduct(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <span className="close-modal" onClick={() => setOpenProduct(null)}>&times;</span>
-            <div className="modal-body" style={{ display: 'grid', gridTemplateColumns: 'minmax(300px, 1fr) 1.2fr', gap: '4rem', alignItems: 'center' }}>
+            <div className="modal-body" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '4rem', alignItems: 'center' }}>
               <div className="modal-img">
-                <img src={openProduct.image || '/favicon.svg'} alt={openProduct.name} style={{ width: '100%', height: 'auto', maxHeight: '500px', objectFit: 'contain' }} />
+                <img src={openProduct.image || '/favicon.svg'} alt={openProduct.name} style={{ width: '100%', height: 'auto', maxHeight: '700px', objectFit: 'contain' }} />
               </div>
               <div className="modal-info">
                 <div className="product-category">{openProduct.category}</div>
