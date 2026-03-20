@@ -1,16 +1,16 @@
 :root {
-  --primary: #7324d4;
-  --secondary: #ff8c00;
-  --bg-dark: #0a0a0c;
-  --bg-light: #16161e;
-  --text-main: #e0e0e0;
-  --text-dim: #a0a0a0;
-  --accent-glow: rgba(115, 36, 212, 0.4);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --primary: #FA8072; /* Salmon */
+  --secondary: #D2B48C; /* Tan/Beige secondary */
+  --bg-dark: #FAF9F6; /* Alabaster/Beige very light */
+  --bg-light: #FFFFFF; /* White */
+  --text-main: #483C32; /* Taupe dark */
+  --text-dim: #8B8589; /* Taupe light/grayish */
+  --accent-glow: rgba(250, 128, 114, 0.1);
+  --border-color: rgba(72, 60, 50, 0.1);
   --container-width: 1200px;
-  --radius-lg: 20px;
-  --radius-md: 12px;
-  --transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 * {
